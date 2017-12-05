@@ -68,8 +68,8 @@ function addTweet(event) {
 		container.appendChild(time);
 	  printTweet.appendChild(container);
 
-   textBox.value = ' ';  // segun para dejar vacio el textarea despues de dar submit
-	                       //pero aun no funciona :(
+   boxText.value = ' ';  // segun para dejar vacio el textarea despues de dar submit
+	 wordCount.textContent=140;                    //pero aun no funciona :(
 
 }
 
@@ -102,3 +102,16 @@ function addTweet(event) {
 //Escribe un mensaje...
 
 //Elegir archivos
+var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keydown', autosize);
+
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    // for box-sizing other than "content-box" use:
+    // el.style.cssText = '-moz-box-sizing:content-box';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}

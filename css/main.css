@@ -326,6 +326,10 @@ form:hover{
   display: inline-block;
   width: 98.5%;
 }
+
+textarea {
+  resize: vertical;
+}
 /*-----COLUMN 3---*/
 #column-right{
 	width: 22%;
@@ -699,7 +703,7 @@ article{
 	background-color: white;
 	width: 78%;
 	height: 60px;
-	overflow: hidden !important;
+	overflow: auto;
 	resize: none;
 }
 
